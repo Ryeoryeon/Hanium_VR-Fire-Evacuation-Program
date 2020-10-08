@@ -1,0 +1,5 @@
+*.fbx filter=lfs diff=lfs merge=lfs -text
+C:/Users/CIEL/Desktop/김조은/한이음/Hanium_yh/Library/Artifacts/58/585f491c9ef92e4209144a8113bc8ec0 filter=lfs diff=lfs merge=lfs -text
+C:/Users/CIEL/Desktop/김조은/한이음/Hanium_yh/Library/Artifacts/** filter=lfs diff=lfs merge=lfs -text
+*.pack filter=lfs diff=lfs merge=lfs -text
+C:/Users/CIEL/Desktop/김조은/한이음/Hanium_yh/Library/** filter=lfs diff=lfs merge=lfs -text
