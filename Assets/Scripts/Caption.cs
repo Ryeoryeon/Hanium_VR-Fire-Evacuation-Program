@@ -21,13 +21,24 @@ public class Caption : MonoBehaviour
         TimeText = GameObject.Find("Time").GetComponent<Text>();
         NarrationText = GameObject.Find("Narration_text").GetComponent<Text>();
         NarrationText.text = "나레이션 스타트";
+        StartCoroutine(Timer());
+    }
+
+    IEnumerator Timer()
+    {
+        while(true)
+        {
+            CountingTime++;
+            SetText();
+            yield return new WaitForSeconds(1);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
         // 나중에 프로그램이 끝났을 때 정지되도록 예외처리 해주기
-        CountingTime += Time.deltaTime;
+        //CountingTime += Time.deltaTime;
         SetText();
     }
 

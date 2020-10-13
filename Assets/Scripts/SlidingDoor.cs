@@ -21,23 +21,10 @@ public class SlidingDoor : MonoBehaviour
 
     Vector3 defaultDoorPosition;
 
-    /*
-        // 처음 부분에 추가
+    public enum OpenDirection { x, y, z }
+    public OpenDirection direction;
+    private Vector3 modifyingPosition;
 
-        public enum OpenDirection { x, y, z }
-        public OpenDirection direction = OpenDirection.y;
-
-        // update에 추가
-
-        else if (direction == OpenDirection.y)
-        {
-            doorBody.localPosition = new Vector3(doorBody.localPosition.x, Mathf.Lerp(doorBody.localPosition.y, defaultDoorPosition.y + (open ? openDistance : 0), Time.deltaTime * openSpeed), doorBody.localPosition.z);
-        }
-        else if (direction == OpenDirection.z)
-        {
-            doorBody.localPosition = new Vector3(doorBody.localPosition.x, doorBody.localPosition.y, Mathf.Lerp(doorBody.localPosition.z, defaultDoorPosition.z + (open ? openDistance : 0), Time.deltaTime * openSpeed));
-        }
-     */
 
     void Start()
     {
@@ -53,9 +40,24 @@ public class SlidingDoor : MonoBehaviour
         if (!doorBody)
             return;
 
-        Vector3 modifyingPosition = new Vector3(Mathf.Lerp(doorBody.localPosition.x, defaultDoorPosition.x + (open ? openDistance : 0), Time.deltaTime * openSpeed), doorBody.localPosition.y, doorBody.localPosition.z);
+        if(direction == OpenDirection.x)
+        {
+            modifyingPosition = new Vector3(Mathf.Lerp(doorBody.localPosition.x, defaultDoorPosition.x + (open ? openDistance : 0), Time.deltaTime * openSpeed), doorBody.localPosition.y, doorBody.localPosition.z);
+        }
+
+        else if (direction == OpenDirection.y)
+        {
+            modifyingPosition = new Vector3(doorBody.localPosition.x, Mathf.Lerp(doorBody.localPosition.y, defaultDoorPosition.y + (open ? openDistance : 0), Time.deltaTime * openSpeed), doorBody.localPosition.z);
+        }
+        else if (direction == OpenDirection.z)
+        {
+            modifyingPosition = new Vector3(doorBody.localPosition.x, doorBody.localPosition.y, Mathf.Lerp(doorBody.localPosition.z, defaultDoorPosition.z + (open ? openDistance : 0), Time.deltaTime * openSpeed));
+        }
+
+        //
 
         doorBody.localPosition = modifyingPosition;
+
 
     }
 

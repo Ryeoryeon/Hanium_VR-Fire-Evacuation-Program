@@ -11,14 +11,17 @@
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
-    <TargetFrameworkProfile></TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectGenerator>VSTU</UnityProjectGenerator>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>WSAPlayer:21</UnityBuildTarget>
     <UnityVersion>2019.4.4f1</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion>6</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
@@ -1156,13 +1159,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Akishaqs\Characters\_CommonFiles\_DemoStuff\Scripts\Animations.cs" />
+    <Compile Include="Assets\Akishaqs\Characters\_CommonFiles\_DemoStuff\Scripts\Customizations.cs" />
+    <Compile Include="Assets\Akishaqs\Characters\_CommonFiles\_DemoStuff\Scripts\DragToRotate.cs" />
     <Compile Include="Assets\Scripts\AutoMaterials.cs" />
     <Compile Include="Assets\Scripts\AutoMeshCollider.cs" />
     <Compile Include="Assets\Scripts\Caption.cs" />
+    <Compile Include="Assets\Scripts\MovingTeacher.cs" />
     <Compile Include="Assets\Scripts\PlayerControl.cs" />
     <Compile Include="Assets\Scripts\SlidingDoor.cs" />
     <Compile Include="Assets\Scripts\WayPointTrack.cs" />
     <Compile Include="Assets\Scripts\temp_PlayerKeyboard.cs" />
+    <Compile Include="Assets\U_fire\3d_models\torch\scene\script\TorchSlider.cs" />
+    <Compile Include="Assets\U_fire\3d_models\torch\scene\script\Torchslider2.cs" />
+    <Compile Include="Assets\U_fire\3d_models\torch\scripts\Torchelight.cs" />
+    <Compile Include="Assets\U_fire\Scripts\MouseLook.cs" />
+    <Compile Include="Assets\U_fire\Scripts\PanWM.cs" />
+    <Compile Include="Assets\U_fire\Scripts\ParticleSystemExtension.cs" />
+    <Compile Include="Assets\U_fire\Scripts\extra_force.cs" />
+    <Compile Include="Assets\U_fire\Scripts\fire_wiggle.cs" />
+    <Compile Include="Assets\U_fire\Scripts\flickering.cs" />
+    <Compile Include="Assets\U_fire\Scripts\gui.cs" />
+    <Compile Include="Assets\U_fire\Scripts\lookAt.cs" />
+    <Compile Include="Assets\U_fire\Scripts\wind_rot.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

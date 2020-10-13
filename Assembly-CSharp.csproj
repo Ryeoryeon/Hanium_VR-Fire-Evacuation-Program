@@ -63,13 +63,31 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Akishaqs\Characters\_CommonFiles\_DemoStuff\Scripts\Animations.cs" />
+    <Compile Include="Assets\Akishaqs\Characters\_CommonFiles\_DemoStuff\Scripts\Customizations.cs" />
+    <Compile Include="Assets\Akishaqs\Characters\_CommonFiles\_DemoStuff\Scripts\DragToRotate.cs" />
     <Compile Include="Assets\Scripts\AutoMaterials.cs" />
     <Compile Include="Assets\Scripts\AutoMeshCollider.cs" />
     <Compile Include="Assets\Scripts\Caption.cs" />
+    <Compile Include="Assets\Scripts\MovingTeacher.cs" />
     <Compile Include="Assets\Scripts\PlayerControl.cs" />
     <Compile Include="Assets\Scripts\SlidingDoor.cs" />
     <Compile Include="Assets\Scripts\WayPointTrack.cs" />
     <Compile Include="Assets\Scripts\temp_PlayerKeyboard.cs" />
+    <Compile Include="Assets\U_fire\3d_models\torch\scene\script\TorchSlider.cs" />
+    <Compile Include="Assets\U_fire\3d_models\torch\scene\script\Torchslider2.cs" />
+    <Compile Include="Assets\U_fire\3d_models\torch\scripts\Torchelight.cs" />
+    <Compile Include="Assets\U_fire\Scripts\MouseLook.cs" />
+    <Compile Include="Assets\U_fire\Scripts\PanWM.cs" />
+    <Compile Include="Assets\U_fire\Scripts\ParticleSystemExtension.cs" />
+    <Compile Include="Assets\U_fire\Scripts\extra_force.cs" />
+    <Compile Include="Assets\U_fire\Scripts\fire_wiggle.cs" />
+    <Compile Include="Assets\U_fire\Scripts\flickering.cs" />
+    <Compile Include="Assets\U_fire\Scripts\gui.cs" />
+    <Compile Include="Assets\U_fire\Scripts\lookAt.cs" />
+    <Compile Include="Assets\U_fire\Scripts\wind_rot.cs" />
+    <None Include="Assets\U_fire\3d_models\torch\readme.txt" />
+    <None Include="Assets\Akishaqs\Characters\_CommonFiles\_DemoStuff\Fonts\OFL.txt" />
     <None Include="Assets\Hovl Studio\Procedural fire\Shaders\FireSphere.shader" />
     <None Include="Assets\Hovl Studio\Procedural fire\Demo scene\Readme.txt" />
     <Reference Include="UnityEngine">
@@ -250,7 +268,7 @@
       <HintPath>D:/Unity/2019.4.4f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
     <Reference Include="Valve.Newtonsoft.Json">
-      <HintPath>D:/Unity/Hanium/Hanium_yh/Assets/SteamVR/Input/Plugins/JSON.NET/Valve.Newtonsoft.Json.dll</HintPath>
+      <HintPath>D:/Unity/Hanium_yh/Assets/SteamVR/Input/Plugins/JSON.NET/Valve.Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>D:/Unity/2019.4.4f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -613,40 +631,40 @@
       <HintPath>D:/Unity/2019.4.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>D:/Unity/Hanium/Hanium_yh/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>D:/Unity/Hanium_yh/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>D:/Unity/Hanium/Hanium_yh/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>D:/Unity/Hanium_yh/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/Unity/Hanium/Hanium_yh/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>D:/Unity/Hanium_yh/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>D:/Unity/Hanium/Hanium_yh/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>D:/Unity/Hanium_yh/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>D:/Unity/Hanium/Hanium_yh/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>D:/Unity/Hanium_yh/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>D:/Unity/Hanium/Hanium_yh/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>D:/Unity/Hanium_yh/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>D:/Unity/Hanium/Hanium_yh/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>D:/Unity/Hanium_yh/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.WindowsMR.Editor">
-      <HintPath>D:/Unity/Hanium/Hanium_yh/Library/ScriptAssemblies/Unity.XR.WindowsMR.Editor.dll</HintPath>
+      <HintPath>D:/Unity/Hanium_yh/Library/ScriptAssemblies/Unity.XR.WindowsMR.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/Unity/Hanium/Hanium_yh/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>D:/Unity/Hanium_yh/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.WindowsMR">
-      <HintPath>D:/Unity/Hanium/Hanium_yh/Library/ScriptAssemblies/Unity.XR.WindowsMR.dll</HintPath>
+      <HintPath>D:/Unity/Hanium_yh/Library/ScriptAssemblies/Unity.XR.WindowsMR.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>D:/Unity/Hanium/Hanium_yh/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>D:/Unity/Hanium_yh/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.quicksearch">
-      <HintPath>D:/Unity/Hanium/Hanium_yh/Library/ScriptAssemblies/com.unity.quicksearch.dll</HintPath>
+      <HintPath>D:/Unity/Hanium_yh/Library/ScriptAssemblies/com.unity.quicksearch.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
