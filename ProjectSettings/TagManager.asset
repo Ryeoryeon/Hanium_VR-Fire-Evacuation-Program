@@ -8,6 +8,9 @@ TagManager:
   - Ceramic
   - Cement
   - Wooden
+  - WAY_POINT
+  - Destination
+  - NPC
   layers:
   - Default
   - TransparentFX

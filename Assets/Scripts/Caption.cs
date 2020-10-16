@@ -9,7 +9,7 @@ public class Caption : MonoBehaviour
     // Start is called before the first frame update
 
     private Text TimeText;
-    private Text NarrationText;
+    public Text NarrationText;
 
     private float CountingTime = 0;
 
