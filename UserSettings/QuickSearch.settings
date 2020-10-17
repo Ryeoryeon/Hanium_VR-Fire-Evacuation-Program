@@ -17,9 +17,9 @@ scopes = {
 	"menu.0260DB95" = "True"
 }
 providers = {
-	object = {
+	asset = {
 		active = true
-		priority = 55
+		priority = 25
 		defaultAction = null
 	}
 	query = {
@@ -27,9 +27,9 @@ providers = {
 		priority = 100
 		defaultAction = null
 	}
-	asset = {
+	object = {
 		active = true
-		priority = 25
+		priority = 55
 		defaultAction = null
 	}
 	scene = {
@@ -42,14 +42,14 @@ providers = {
 		priority = 90
 		defaultAction = null
 	}
-	find = {
-		active = true
-		priority = 25
-		defaultAction = null
-	}
 	log = {
 		active = false
 		priority = 210
+		defaultAction = null
+	}
+	find = {
+		active = true
+		priority = 25
 		defaultAction = null
 	}
 }
