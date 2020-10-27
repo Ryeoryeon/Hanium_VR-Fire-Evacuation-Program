@@ -20,7 +20,7 @@ public class PlayerControl : MonoBehaviour
     private CharacterController cc;
     private Transform tr;
     public Transform camera_trs;
-
+ 
     public int NarrationText_idx = 0;
 
     private Transform[] points; // 웨이포인트 저장 배열
@@ -84,7 +84,7 @@ public class PlayerControl : MonoBehaviour
         //웨이포인트에 충돌 여부 판단
         if(coll.CompareTag("WAY_POINT"))
         {
-            NarrationText_idx = nextIdx;
+            //NarrationText_idx = nextIdx;
 
             // 맨 마지막 웨이포인트에 도달했을 때 다시 처음 인덱스로 변경
             nextIdx = (++nextIdx >= points.Length) ? 1 : nextIdx;

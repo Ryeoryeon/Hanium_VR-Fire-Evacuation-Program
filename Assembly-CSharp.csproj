@@ -68,12 +68,16 @@
     <Compile Include="Assets\Akishaqs\Characters\_CommonFiles\_DemoStuff\Scripts\DragToRotate.cs" />
     <Compile Include="Assets\Scripts\AutoMaterials.cs" />
     <Compile Include="Assets\Scripts\AutoMeshCollider.cs" />
+    <Compile Include="Assets\Scripts\Billboard.cs" />
     <Compile Include="Assets\Scripts\Caption.cs" />
     <Compile Include="Assets\Scripts\DestroyDestination.cs" />
+    <Compile Include="Assets\Scripts\Move.cs" />
     <Compile Include="Assets\Scripts\MovingTeacher.cs" />
+    <Compile Include="Assets\Scripts\NeonArrow.cs" />
     <Compile Include="Assets\Scripts\PlayerControl.cs" />
     <Compile Include="Assets\Scripts\SlidingDoor.cs" />
     <Compile Include="Assets\Scripts\WayPointTrack.cs" />
+    <Compile Include="Assets\Scripts\followingFriends.cs" />
     <Compile Include="Assets\Scripts\temp_PlayerKeyboard.cs" />
     <Compile Include="Assets\U_fire\3d_models\torch\scene\script\TorchSlider.cs" />
     <Compile Include="Assets\U_fire\3d_models\torch\scene\script\Torchslider2.cs" />
@@ -631,11 +635,26 @@
     <Reference Include="Boo.Lang">
       <HintPath>D:/Unity/2019.4.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.XR.Management">
+      <HintPath>D:/Unity/Hanium_yh/Library/ScriptAssemblies/Unity.XR.Management.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/Unity/Hanium_yh/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Subsystem.Registration">
+      <HintPath>D:/Unity/Hanium_yh/Library/ScriptAssemblies/Unity.Subsystem.Registration.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>D:/Unity/Hanium_yh/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.ARSubsystems">
+      <HintPath>D:/Unity/Hanium_yh/Library/ScriptAssemblies/Unity.XR.ARSubsystems.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.ARSubsystems.Editor">
+      <HintPath>D:/Unity/Hanium_yh/Library/ScriptAssemblies/Unity.XR.ARSubsystems.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.InteractionSubsystems">
+      <HintPath>D:/Unity/Hanium_yh/Library/ScriptAssemblies/Unity.XR.InteractionSubsystems.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>D:/Unity/Hanium_yh/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
@@ -649,17 +668,32 @@
     <Reference Include="Unity.CollabProxy.Editor">
       <HintPath>D:/Unity/Hanium_yh/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.XR.LegacyInputHelpers">
+      <HintPath>D:/Unity/Hanium_yh/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.Management.Editor">
+      <HintPath>D:/Unity/Hanium_yh/Library/ScriptAssemblies/Unity.XR.Management.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>D:/Unity/Hanium_yh/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.XR.WindowsMR.Editor">
-      <HintPath>D:/Unity/Hanium_yh/Library/ScriptAssemblies/Unity.XR.WindowsMR.Editor.dll</HintPath>
+    <Reference Include="UnityEditor.SpatialTracking">
+      <HintPath>D:/Unity/Hanium_yh/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpatialTracking">
+      <HintPath>D:/Unity/Hanium_yh/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.WindowsMixedReality.Editor">
+      <HintPath>D:/Unity/Hanium_yh/Library/ScriptAssemblies/Unity.XR.WindowsMixedReality.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>D:/Unity/Hanium_yh/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.XR.WindowsMR">
-      <HintPath>D:/Unity/Hanium_yh/Library/ScriptAssemblies/Unity.XR.WindowsMR.dll</HintPath>
+    <Reference Include="Unity.XR.WindowsMixedReality">
+      <HintPath>D:/Unity/Hanium_yh/Library/ScriptAssemblies/Unity.XR.WindowsMixedReality.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.XR.LegacyInputHelpers">
+      <HintPath>D:/Unity/Hanium_yh/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>D:/Unity/Hanium_yh/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
@@ -669,6 +703,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="SteamVR_Actions.csproj">
+      <Project>{43DEC060-2346-48B4-2D96-A92BF9ED2853}</Project>
+      <Name>SteamVR_Actions</Name>
+    </ProjectReference>
     <ProjectReference Include="SteamVR_Input_Editor.csproj">
       <Project>{BF24227E-5B14-A531-D5B0-B36A29585629}</Project>
       <Name>SteamVR_Input_Editor</Name>
