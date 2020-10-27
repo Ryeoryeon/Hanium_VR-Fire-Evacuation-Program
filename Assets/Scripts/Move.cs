@@ -56,7 +56,7 @@ public class Move : MonoBehaviour
         {
             Vector3 dir = cam.transform.localRotation * Vector3.back ; // 메인카메라가 바라보는 방향
             dir.y = 0;
-            cameraRigTransform.position += dir * 0.05f; // 흠...? 방향에 뭘 더해줘야하나?
+            cameraRigTransform.position += dir * 0.05f;
         }
 
         

@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class MovingTeacher : MonoBehaviour
 {
+    public GameObject pointPrefab; // 체크포인트 프리팹
     public bool moving = false;
     public Transform teacherbody;
     public Animator anim;
@@ -18,9 +19,11 @@ public class MovingTeacher : MonoBehaviour
     void Start()
     {
         // caption 스크립트에 접근
-        caption_script = GameObject.Find("NPC").GetComponent<Caption>();
-        followingf_script = GameObject.Find("Kira_A_withFace").GetComponent<followingFriends>();
+        /*caption_script = GameObject.Find("NPC").GetComponent<Caption>();
+        followingf_script = GameObject.Find("Kira_A_withFace").GetComponent<followingFriends>();*/
         anim.speed = 0.8f; // 애니메이션 자체의 스피드!
+        Vector3 pos = teacherbody.position + new Vector3(0, 0.05f, -1.7f);
+        Instantiate(pointPrefab, pos, Quaternion.identity);
     }
 
     // Update is called once per frame
@@ -38,8 +41,26 @@ public class MovingTeacher : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Destination"))
+        {
+            if (!anim.GetBool("walk"))
+            {
+                moving = false;
+                teacherbody.rotation = Quaternion.Euler(0, -90, 0);
+
+                Vector3 pos = teacherbody.position + new Vector3(0.1f, 0.05f, 0.25f);
+                Instantiate(pointPrefab, pos, Quaternion.identity);
+            }
+
+            else
+                anim.SetBool("walk", false);
+        }
+    }
+
     // Activate the Main function when Player enter the trigger area
-    void OnTriggerEnter(Collider other)
+    /*void OnTriggerEnter(Collider other)
     {
         // 플레이어와 충돌 시, 움직임 변수 true 설정
         if (other.CompareTag("Player"))
@@ -153,7 +174,7 @@ public class MovingTeacher : MonoBehaviour
         caption_script.restoreCurrentIdx(3);
         caption_script.increaseCurrentIdx();
     }
-
+    */
     // 추후 변형시켜 플레이어와의 거리가 일정 이상 멀어지면 움직임을 멈추도록 진행
     // Deactivate the Main function when Player exit the trigger area
     /*
